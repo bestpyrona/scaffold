@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<center><h1 style="margin-bottom: 100px" id="poststitle">Posts</h1></center>
+    <% @posts.each do |post| %>
+      <div class="card">
+      <div class="post">
+          <div class="front">
+      <h1><%= post.title %></h1>
+      <br>
+      <p><%= post.body %></p>
+      <p><%= post.description %></p>
+          </div>
+          <div class="back">
+      <button class="edit-delete-show"><%= link_to 'Show', post %></button>
+      <button class="edit-delete-show"><%= link_to 'Edit', edit_post_path(post) %></button>
+      <button class="edit-delete-show"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+          </div>
+    </div>
+    </div>
+    <% end %>
+<br>
+
+<center><button id="newpostbutton"><%= link_to 'New Post', new_post_path %></button></center>
