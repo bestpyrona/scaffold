@@ -9,11 +9,13 @@ body {
 
 .card {
   perspective: 1000px;
+  display: inline-block;
 }
 
 .post {
   transition: all 1s ease;
   transform-style: preserve-3d;
+  display: inline-block;
 }
 
 .post:hover {
